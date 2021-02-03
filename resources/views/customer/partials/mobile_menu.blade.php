@@ -44,7 +44,3 @@
         @endif
     </ul>
 </nav>
-
-@section('script')
-
-@endsection

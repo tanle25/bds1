@@ -46,7 +46,7 @@ class HomeController extends Controller
         $home_projects = $this->project_service->getProjectDetails($home_projects);
         $random_realties = RealtyPost::with('realty', 'realty.district')->orderByDesc('id')->take(50)->get();
         if ($random_realties->count() >= 6) {
-            $random_realties = $random_realties->random(8)->sortByDesc('rank');
+            $random_realties = $random_realties->random(6)->sortByDesc('rank');
         }
         $partners = Partner::where('rank', 1)->take(10)->get();
         return view('customer.pages.home.index', compact('home_why_choose', 'partners', 'random_realties', 'home_projects', 'provinces', 'featured_district', 'home_featured_cats', 'home_featured_post'));
