@@ -52,11 +52,16 @@ class ContactController extends Controller
     public function store(ContactRequest $request)
     {
         $data = $request->all();
-        if (!$request->email && !$request->phone_number) {
+        $input = [
+            'fullname' => $request->contact_name,
+            'email' => $request->contact_email,
+            'contact_phone' => $request->contact_phone,
+            'contact_message' => $request->contact_message,
+        ];
+        if (!$request->contact_email && !$request->contact_phone) {
             return redirect()->back()->with(['error' => 'Bạn vui lòng nhập thông tin để chúng tôi có thể liên hệ!']);
         }
-        $new_contact = Contact::create($data);
-
+        $new_contact = Contact::create($input);
         return redirect()->back()->with('success', 'Cảm ơn bạn đã phản hồi chúng tôi sẽ liên hệ với bạn ngay!');
     }
 

@@ -193,6 +193,7 @@
 
         $(document).on('click', '.btn-update-ground', function(){
             groundId = $(this).data('ground-id');
+            console.log($('[name=ground_images]').val());
             data = {
                 name: $('#ground_name').val(),
                 images: $('[name=ground_images]').val(),

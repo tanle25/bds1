@@ -21,7 +21,11 @@ class PostController extends Controller
         $date_string = __($created_at->format('l')) . ', ngày ' . $created_at->format('d/m/Y g:i A');
         // $post_categories = PostCategory::take(10)->get();
         $curent_category = $post->categories->first();
-        $related_post = $curent_category->posts->take(5) ?? [];
+        if ($curent_category) {
+            $related_post = $curent_category->posts->except($post->id)->take(5) ?? [];
+        } else {
+            $related_post = [];
+        }
         $weekly_news = Post::with('categories')->where('is_featured', 1)->orderByDesc('id')->take(5)->get();
 
         return view('customer.pages.posts.show', compact('post', 'date_string', 'related_post', 'weekly_news'));

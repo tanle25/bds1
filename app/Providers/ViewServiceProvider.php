@@ -95,6 +95,8 @@ class ViewServiceProvider extends ServiceProvider
                     $featured_tags = Tag::all();
                     if ($featured_tags->count() >= 6) {
                         $featured_tags = $featured_tags->random(6);
+                    } else {
+                        $featured_tags = [];
                     }
 
                     $view->with(['featured_tags' => $featured_tags, 'featured_posts' => $featured_posts, 'featured_districts' => $featured_districts]);

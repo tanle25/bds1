@@ -17,7 +17,7 @@ class AddFieldToProjectsTable extends Migration
             $table->unsignedTinyInteger('number_of_buildings')->nullable();
             $table->unsignedSmallInteger('number_of_floors')->nullable();
             $table->unsignedMediumInteger('number_of_apartments')->nullable();
-            $table->unsignedBigInteger('partner_id');
+            $table->unsignedBigInteger('partner_id')->nullable();
             $table->longText('utilities_desc')->nullable();
             $table->longText('project_progress_desc')->nullable();
         });
@@ -41,9 +41,12 @@ class AddFieldToProjectsTable extends Migration
     public function down()
     {
         Schema::table('projects', function (Blueprint $table) {
-            $table->dropColumn('number_of_buildings')->nullable();
-            $table->dropColumn('number_of_floors')->nullable();
-            $table->dropColumn('number_of_apartments')->nullable();
+            $table->dropColumn('number_of_buildings');
+            $table->dropColumn('number_of_floors');
+            $table->dropColumn('number_of_apartments');
+            $table->dropColumn('partner_id');
+            $table->dropColumn('utilities_desc');
+            $table->dropColumn('project_progress_desc');
         });
 
         Schema::dropIfExists('project_documents');

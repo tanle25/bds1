@@ -1,0 +1,10 @@
+@each $name, $color in $theme-colors {
+    .hrm-ribbon-#{$name} {
+        background-color: $color;
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 0 0 5px 0;
+    }
+}

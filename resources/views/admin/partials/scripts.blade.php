@@ -159,8 +159,10 @@
         filebrowserUploadUrl: '/admin/laravel-filemanager/upload?type=Files&_token=',
         extraPlugins: 'lineheight',
 
+        height: "500px",
         allowedContent: true,
         fontSize_sizes:  "{{$font_list}}",
+
 
     };
 

@@ -120,3 +120,7 @@ Route::get('du-an{search_slug}', [ProjectCustomerController::class, 'index'])->n
 Route::get('du-an/{slug}', [ProjectCustomerController::class, 'show'])->name('customer.project.show');
 Route::get('tag/{slug}', [RealtyTagController::class, 'getRealtyByTag'])->name('customer.realty_tag.get_all');
 Route::get('/{search_slug}', [RealtyPostController::class, 'searchByParam'])->name('customer.realty_post.search_by_param');
+
+Route::get('/v2/{any}', function () {
+    return view('app.main');
+});

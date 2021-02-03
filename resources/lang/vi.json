@@ -1,5 +1,5 @@
 {
-    "Monday": "Thứ 2", "Tuesday" :"Thứ ba", "Wesnesday": "Thứ tư", "Thursday": "Thứ năm", "Friday": "Thứ sáu", "Saturday": "Thứ bảy", "Sunday": "Chủ nhật",
+    "Monday": "Thứ 2", "Tuesday" :"Thứ ba", "Wednesday": "Thứ tư", "Thursday": "Thứ năm", "Friday": "Thứ sáu", "Saturday": "Thứ bảy", "Sunday": "Chủ nhật",
     "We have emailed your password reset link!" : "Chúng tôi đã gửi link lấy lại mật khẩu đến gmail của bạn!",
     "We can't find a user with that email address.": "Địa chỉ Email không tồn tại"
 }

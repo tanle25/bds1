@@ -1,4 +1,4 @@
-<textarea name="{{$name}}" class="form-field @error($name) is-invalid @enderror" id="{{$id}}" rows="10" cols="80">
+<textarea name="{{$name}}" class="form-field @error($name) is-invalid @enderror" id="{{$id}}" rows="30" cols="80">
     {{$current_input}}
 </textarea>
 

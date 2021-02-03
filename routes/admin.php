@@ -28,6 +28,7 @@ use App\Http\Controllers\Admin\ThemeOptionController;
 use App\Http\Controllers\Admin\WebConfigController;
 use App\Http\Controllers\Admin\WidgetController;
 use App\Http\Controllers\Auth\AdminLoginController;
+use App\Http\Controllers\CrawController;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function () {
@@ -220,4 +221,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function () {
     // API service
     Route::post('api-service/multiple-delete', [HelperServiceController::class, 'multiDelete'])->name('admin.helper_service.multi_delete');
 
+    //crawler controller
+    Route::get('/craw', [CrawController::class, 'showCrawForm'])->name('admin.craw.showCrawForm');
+    Route::post('/craw', [CrawController::class, 'getByLink'])->name('admin.craw.getByLink');
 });

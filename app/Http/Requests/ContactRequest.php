@@ -24,22 +24,22 @@ class ContactRequest extends FormRequest
     public function rules()
     {
         return [
-            'fullname' => 'required|max:255',
-            'email' => 'nullable|email|max:255',
-            'phone_number' => 'required|max:25',
-            'address' => 'required|max:256',
-            'messages' => 'required|max:500',
+            'contact_name' => 'required|max:255',
+            'contact_email' => 'nullable|email|max:255',
+            'contact_phone' => 'required|max:25',
+            'address' => 'nullable|max:256',
+            'contact_message' => 'required|max:500',
         ];
     }
 
     public function attributes()
     {
         return [
-            'fullname' => 'Họ tên',
-            'email' => 'Email',
-            'phone_number' => 'Số điện thoại',
+            'contact_name' => 'Họ tên',
+            'contact_email' => 'Email',
+            'contact_phone' => 'Số điện thoại',
             'address' => 'Địa chỉ',
-            'messages' => 'Lời nhắn',
+            'contact_message' => 'Lời nhắn',
         ];
     }
 }

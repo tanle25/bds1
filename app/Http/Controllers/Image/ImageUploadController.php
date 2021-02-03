@@ -52,10 +52,10 @@ class ImageUploadController extends Controller
             $image_name = Str::random(15) . '.jpg';
             // Check if folder if not exsist
             if (!file_exists($save_path)) {
-                mkdir($save_path, 777, true);
+                mkdir($save_path, 0755, true);
             }
             if (!file_exists($save_path . '/thumbs')) {
-                mkdir($save_path . '/thumbs', 777, true);
+                mkdir($save_path . '/thumbs', 0755, true);
             }
             // Create image and thumb
             $image = Image::make($request->file('file'));

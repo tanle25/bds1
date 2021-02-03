@@ -2,7 +2,7 @@
   <div class="modal-dialog">
     <div class="modal-content p-3">
         <div class="logo-login text-center">
-            <img src="{{asset('images/logo.png')}}" alt="">
+            <img height="70px" src="{{Str::replaceLast(',', '', $theme_options['logo'] ?? '')}}" alt="">
         </div>
         <div class="pt-2 text-center">
             <strong class="text-blue-dark font-13">Quên mật khẩu?</strong>

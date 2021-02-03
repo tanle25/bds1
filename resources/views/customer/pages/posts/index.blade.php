@@ -148,17 +148,8 @@ Tin tức bất động sản
 @section('script')
     @parent
     <script>
-        $('.post-title').each(function(){
-            maxText($(this), 100);
-        })
-
-        $('.post-description').each(function(){
-            maxText($(this), 140);
-        })
-        maxText($('.blog_excerpt'), 90);
 
         $('.featured-post-slider').owlCarousel({
-            loop:true,
             margin: 20,
             dots:false,
             nav:true,
@@ -180,6 +171,15 @@ Tin tức bất động sản
                 }
             }
         });
+
+        $('.post-title').each(function(){
+            maxText($(this), 100);
+        })
+
+        $('.post-description').each(function(){
+            maxText($(this), 140);
+        })
+        maxText($('.blog_excerpt'), 90);
 
     </script>
 @endsection

@@ -55,7 +55,7 @@
                         </div>
                     </div>
                     @endforeach
-                    <a class="font-weight-500 font-9 d-md-none" href="/tin-tuc/{{$post_category->slug}}">Xem thêm ...</a>
+                    <a class="font-weight-500 font-9 d-md-none" href="/tin-tuc/{{$post_category->slug ?? ''}}">Xem thêm ...</a>
                 </div>
             </div>
             <div class="col-md-3 pt-3">

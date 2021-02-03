@@ -8,10 +8,12 @@ class CurrencyHelper
     {
         if ($price >= 1000000000) {
             return round($price / 1000000000, 1) . ' tỉ';
-        } elseif ($price > 0) {
+        } elseif ($price >= 1000000) {
             return round($price / 1000000, 0) . ' triệu';
-        } else {
-            return '0';
+        } elseif ($price >= 1000) {
+            return round($price / 1000, 0) . ' nghìn';
+        }{
+            return $price;
         }
     }
 }

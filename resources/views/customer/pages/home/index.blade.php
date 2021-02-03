@@ -2,8 +2,8 @@
 
 @section('preset_seo')
     @php
-        $custom_title = 'Trang chủ bất động sản Tây Ninh';
-        $custom_description = 'Trang chủ bất động sản Tây Ninh';
+        $custom_title = 'Trang chủ bất động sản Thanh Hóa';
+        $custom_description = 'Trang chủ bất động sản Thanh Hóa';
     @endphp
 @endsection
 
@@ -40,8 +40,7 @@ Trang chủ
             </div>
         </div>
     </section>
-
-    {{-- @include('customer.pages.home.contents.contact') --}}
+    @include('customer.pages.home.contents.contact')
 @endsection
 
 @section('script')

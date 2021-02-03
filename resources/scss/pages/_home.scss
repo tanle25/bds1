@@ -1,10 +1,23 @@
 .banner-home {
     @include media-breakpoint-up(lg) {
+        .banner-home-slider {
+            height: 360px;
+            position: relative;
+        }
     }
     .banner-item {
         @include media-breakpoint-up(lg) {
+            height: 360px;
         }
     }
+}
+
+.search-home {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .section-filter-home,
@@ -56,7 +69,6 @@
             }
         }
     }
-
     .select2-container--default
         .select2-selection--single
         .select2-selection__rendered {

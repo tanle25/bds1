@@ -33,7 +33,7 @@ class MenuController extends Controller
     {
         $data = $request->all();
         $data['parent_id'] = null;
-        $data['sort'] = 1000;
+        $data['sort'] = 200;
         Menu::create($data);
         $menu_list = $this->getMenuTree($request->category);
         return response()->json(['success' => 'Thêm mới menu thành công', 'menus' => $menu_list]);

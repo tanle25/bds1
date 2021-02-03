@@ -14,7 +14,7 @@
                 </button>
             </div>
             <div class="logo-login text-center mt-3">
-                <img src="{{asset('images/logo.png')}}" alt="">
+                <img height="70px" src="{{Str::replaceLast(',', '', $theme_options['logo'] ?? '')}}" alt="">
             </div>
             <div class="modal-body">
                 <p class="p-text text-center">Nhập lại mật khẩu mới và xác nhận để thay đổi</p>

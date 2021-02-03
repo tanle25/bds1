@@ -3,7 +3,7 @@
     <div class="modal-content px-4 pb">
       <div class="modal-body">
         <div class="logo-login text-center">
-          <img src="{{asset('images/logo.png')}}" alt="">
+          <img height="70px" src="{{Str::replaceLast(',', '', $theme_options['logo'] ?? '')}}" alt="">
         </div>
         <div class="pt-2 mb-3 text-center">
             <strong class="text-blue-dark font-13">Đăng nhập vào tại khoản của bạn</strong>

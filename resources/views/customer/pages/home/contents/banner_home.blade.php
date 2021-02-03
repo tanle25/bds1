@@ -26,7 +26,7 @@
 @endsection
 <section class="banner-home">
     @if (Agent::isMobile())
-    <div class="banner-home-slider owl-carousel" style="z-index: 1">
+    <div class="banner-home-slider owl-carousel">
             @foreach ($banner_mobile as $item)
                 @if ($item)
                     <div class="item img-responsive">
@@ -36,7 +36,7 @@
             @endforeach
         </div>
     @else
-        <div class="banner-home-slider owl-carousel" style="z-index: -1">
+        <div class="banner-home-slider owl-carousel" style="z-index: 1">
             @foreach ($banners as $item)
                 @if ($item)
                     <div class="item embed-responsive embed-responsive-19by4 w-100 banner-item">
@@ -47,10 +47,11 @@
         </div>
     @endif
 
-	<div class="container mx-auto px-0" style="margin-top: -72px">
+	<div class="container mx-auto px-0 position-relative" style="margin-top: -72px; z-index:2">
 		<div class="section-filter-home d-none d-md-block">
             <form action="" id="form-search">
                 <div class="search-type d-flex">
+
                     <div class="search-type-item mr-1">
                         <input type="radio"  class="d-none" name="loai-tin-dang" value="1" id="realty-sell">
                         <label class="py-2 px-4 font-9 m-0 rounded-top" for="realty-sell"><strong>NHÀ ĐẤT BÁN</strong></label>

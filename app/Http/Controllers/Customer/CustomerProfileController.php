@@ -24,11 +24,11 @@ class CustomerProfileController extends Controller
             $save_path = storage_path('app/public/user_avatar');
             $image_name = Str::random(15) . '.jpg';
             if (!file_exists($save_path)) {
-                mkdir($save_path, 777, true);
+                mkdir($save_path, 0775, true);
             }
             Image::make($request->file('profile_image_path'))->save(storage_path('app/public/user_avatar/' . $image_name));
             if (!file_exists($save_path . '/thumbs')) {
-                mkdir($save_path . '/thumbs', 777, true);
+                mkdir($save_path . '/thumbs', 0775, true);
             }
             Image::make($request->file('profile_image_path'))
                 ->resize(400, null, function ($constraint) {

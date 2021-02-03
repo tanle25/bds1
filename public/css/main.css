@@ -20064,6 +20064,27 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   margin: 0 !important;
 }
 
+@media (min-width: 992px) {
+  .banner-home .banner-home-slider {
+    height: 360px;
+    position: relative;
+  }
+}
+
+@media (min-width: 992px) {
+  .banner-home .banner-item {
+    height: 360px;
+  }
+}
+
+.search-home {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
 .section-filter-home .search-type .search-type-item label,
 .nav-search .search-type .search-type-item label {
   background-color: white;
