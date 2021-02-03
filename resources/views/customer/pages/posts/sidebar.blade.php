@@ -10,18 +10,6 @@
 
 <div class="col-md-4 sidebar">
     {{-- Chuyên mục được yêu thích --}}
-    {{-- <div class="rounded-1 bg-white p-3 mb-3" >
-        <h4 class="uppercase font-w-600">Chuyên mục được yêu thích</h4>
-        @isset($post_categories)
-        @foreach ($post_categories->take(10) as $category)
-        <a href="{{route('customer.post.show_by_category', $category->slug)}}" class="d-inline-block py-1 px-2 m-2 hrm-btn-info-solid">
-            <strong class="font-9">#{{$category->name}}</strong>
-        </a>
-        @endforeach
-        @endisset
-    </div> --}}
-
-    {{-- Chuyên mục được yêu thích --}}
     @isset($featured_posts)
     <div class="rounded-1 bg-white p-3 mb-3 border-bottom" >
         <h4 class="font-w-600 uppercase">Tin xem nhiều nhất</h4>
@@ -51,19 +39,6 @@
         </div>
     </div>
     @endisset
-
-    Chuyên mục được yêu thích
-    {{-- <div class="rounded-1 bg-white p-3 mb-3" >
-        <h4 class="uppercase font-w-600">Chủ đề được yêu thích</h4>
-        @isset($featured_tags)
-        @foreach ($featured_tags as $tag)
-        <a href="{{route('customer.post_tag.get_all', $tag->slug)}}" class="d-inline-block py-1 px-2 my-2 mr-2 hrm-btn-info-solid">
-            <strong class="font-9">#{{$tag->name}}</strong>
-        </a>
-        @endforeach
-        @endisset
-    </div> --}}
-
 
     {{-- Chuyên mục được yêu thích --}}
     @isset($featured_posts)

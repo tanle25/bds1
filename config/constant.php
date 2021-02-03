@@ -1,5 +1,6 @@
 <?php
 return [
+    'province_name' => env('APP_PROVINCE', 'Thanh Hóa'),
     'price_type' => [
         '0' => [
             'front_view' => 'Thỏa thuận',
