@@ -115,6 +115,7 @@ Route::get('/tin-tuc/{cat_slug}', [CustomerPostController::class, 'showByCategor
 Route::get('/tin-tuc/{cat_slug}/{post_slug}', [CustomerPostController::class, 'show'])->name('customer.post.show');
 
 Route::get('/lien-he', [ContactController::class, 'showFrontend'])->name('admin.class_request.show_frontend');
+Route::post('/lien-he', [ContactController::class, 'store'])->name('admin.class_request.store');
 
 Route::get('du-an{search_slug}', [ProjectCustomerController::class, 'index'])->name('customer.project.index');
 Route::get('du-an/{slug}', [ProjectCustomerController::class, 'show'])->name('customer.project.show');
