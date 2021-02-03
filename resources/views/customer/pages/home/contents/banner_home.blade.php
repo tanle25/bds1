@@ -47,7 +47,7 @@
         </div>
     @endif
 
-	<div class="container mx-auto px-0 position-relative" style="margin-top: -72px; z-index:2">
+	<div class="container mx-auto px-0 position-relative d-none d-md-block" style="margin-top: -72px; z-index:2">
 		<div class="section-filter-home d-none d-md-block">
             <form action="" id="form-search">
                 <div class="search-type d-flex">

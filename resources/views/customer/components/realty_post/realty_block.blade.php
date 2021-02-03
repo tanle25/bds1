@@ -78,7 +78,7 @@
                 </span>
             </div>
         </div>
-        <div class="realty-block-footer bg-white px-3 pb-2">
+        <div class="realty-block-footer bg-white px-3 pb-2 d-none d-md-block">
             <div class="border-top justify-content-between d-flex py-2 my-1">
                 <div class="font-8"><i class="fal fa-calendar-alt"></i> {{Carbon\Carbon::parse($item->created_at ?? '')->format('d/m/Y')}}</div>
                 <div class="font-8"><i class="fal fa-eye"></i> 23</div>

@@ -94,7 +94,7 @@
                     {{--ss--}}
                 </div>
             </section>
-            <div class="bg-primary">
+            <div class="bg-primary d-none d-lg-block">
                 <nav class="d-flex align-items-center justify-content-between desktop-menu container">
                     @foreach ($main_menu as $item)
                     <div class="menu-item py-2 pr-4 mr-2 @if(isset($item->childs) && $item->childs != []) has-child @endif"><a class="font-weight-600 text-white font-9" href="{{$item->href ?? '#'}}"> {{$item->title}}</a>
