@@ -20151,6 +20151,16 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   padding-left: 30px;
 }
 
+.section-filter-home .select2-container--default,
+.nav-search .select2-container--default {
+  width: 100% !important;
+}
+
+.section-filter-home .select2-container--default:first-child .select2-selection--single,
+.nav-search .select2-container--default:first-child .select2-selection--single {
+  border-right: 0 !important;
+}
+
 .select2-container--default .select2-results__option[aria-disabled=true] {
   display: none;
 }

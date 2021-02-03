@@ -50,7 +50,7 @@
 
 		</div>
     </div>
-    <div class="footer-bottom pt-3">
+    {{-- <div class="footer-bottom pt-3">
         <div class="container">
             <div class="row pb-4">
                 <div class="col-md-4 text-light text-center">
@@ -71,7 +71,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>
 <button class="position-fixed btn up-to-top-btn rounded-circle btn-info" style="opacity:0 ; transition: .5s ; z-index: 100000; right:30px; bottom: 60px">
     <i class="far fa-arrow-up"></i>
