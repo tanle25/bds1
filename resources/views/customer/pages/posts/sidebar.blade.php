@@ -40,7 +40,7 @@
 
     @isset($featured_districts)
     <div class="rounded-1 bg-white p-3 mb-3 border-bottom" >
-        <h4 class="uppercase font-w-600">Mua bán nhà đất tại Tây Ninh</h4>
+        <h4 class="uppercase font-w-600">Mua bán nhà đất tại {{config('constant.province_name') ?? 'Thanh Hóa'}}</h4>
         <div class="row">
             @foreach ($featured_districts as $district)
             <div class="col-6 py-1">

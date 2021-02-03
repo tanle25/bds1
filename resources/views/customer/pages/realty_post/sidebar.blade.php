@@ -1,6 +1,6 @@
 <div class="p-3 rounded bg-white border">
     <h3 class="font-12 py-2 border-bottom">
-        Nhà đất tại Tây Ninh
+        Nhà đất tại {{config('constant.province_name') ?? 'Thanh Hóa'}}
     </h3>
     <div class="">
         @foreach ($districts as $item)
