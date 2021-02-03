@@ -20,7 +20,7 @@
 <div class="navigation sticky-top bg-info">
     <div class="header-container border-bottom">
         <header class="">
-            <section class=" container menu-desktop d-none d-md-flex justify-content-center align-items-center pb-3">
+            <section class=" container menu-desktop d-none d-md-flex justify-content-center align-items-center py-2">
                 <div class="navbar-header">
                     <div class="" id="brand">
                         <a href="/"><img class="lazy" style="max-height: 60px" data-src="{{$logo}}" alt="brand"></a>
