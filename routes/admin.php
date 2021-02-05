@@ -224,4 +224,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function () {
     //crawler controller
     Route::get('/craw', [CrawController::class, 'showCrawForm'])->name('admin.craw.showCrawForm');
     Route::post('/craw', [CrawController::class, 'getByLink'])->name('admin.craw.getByLink');
+
+    Route::get('/realty/craw', [CrawController::class, 'getRealtyForm'])->name('admin.craw.getRealty');
+    Route::post('/realty/craw', [CrawController::class, 'getRealty'])->name('admin.craw.saveRealty');
+
 });

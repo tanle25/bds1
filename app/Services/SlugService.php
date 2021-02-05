@@ -36,4 +36,14 @@ class SlugService
         }
         return $slug;
     }
+
+    public function isExsist($string)
+    {
+        $slug = Str::slug($string);
+        $instance = $this->model::where('slug', $slug)->first();
+        if (!$instance) {
+            return false;
+        };
+        return true;
+    }
 }

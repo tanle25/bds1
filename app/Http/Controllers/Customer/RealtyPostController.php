@@ -167,7 +167,6 @@ class RealtyPostController extends Controller
             $new_realty_post->delete();
             $request->flash();
             return redirect()->back()->with('error', 'Tài khoản của bạn không đủ');
-
         }
 
         $new_payment->save();
@@ -200,7 +199,6 @@ class RealtyPostController extends Controller
             return $e->getMessage();
             DB::rollback();
         }
-
     }
 
     public function edit($id)
@@ -297,9 +295,6 @@ class RealtyPostController extends Controller
             'contact_phone_number' => $request->contact_phone_number,
             'contact_email' => $request->contact_email,
             'contact_address' => $request->contact_address,
-            // 'rank' => $request->rank,
-            // 'open_at' => Carbon::createFromFormat('d/m/Y', $request->open_at)->format('Y-m-d H:i:s'),
-            // 'close_at' => Carbon::createFromFormat('d/m/Y', $request->close_at)->format('Y-m-d H:i:s'),
         ]);
 
         $realty_post->save();
