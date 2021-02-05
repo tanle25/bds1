@@ -8,12 +8,20 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <title>Hàm rồng Media</title>
+    <title>{{$theme_options['Tên_công_ty'] ?? 'Demo'}}</title>
 </head>
 <body>
     <div id="app">
 
     </div>
 </body>
+@php
+    $logo = Str::replaceLast(',', '', $theme_options['logo'] ?? '')
+@endphp
+<script>
+    var theme_options = {
+        logo: "{{$logo}}"
+    }
+</script>
 <script src="{{ asset('js/app.js') }}"></script>
 </html>

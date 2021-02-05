@@ -7,8 +7,10 @@ Vue.use(VueRouter);
 
 import VueAxios from 'vue-axios';
 import axios from 'axios';
+import Vuex from 'vuex'
 
 Vue.use(VueAxios, axios);
+Vue.use(Vuex);
 
 axios.defaults.headers.post['X-CSRF-Token'] = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
@@ -52,10 +54,16 @@ const routes = [
 
 const router = new VueRouter({routes,  mode: 'history'});
 
+const store =  new Vuex.Store({
+    state: {
+        logo: theme_options.logo,
+    },
+})
+
 const app = new Vue({
     el: '#app',
     render: h=> h(App),
     router,
     vuetify,
-
+    store: store,
 })

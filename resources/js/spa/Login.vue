@@ -5,10 +5,10 @@
             <div class="form-wraper d-flex flex-column align-center">
                 <div>
                     <v-img
-                        lazy-src="/images/logo.png"
+                        :lazy-src="this.$store.state.logo"
                         max-height="100"
                         class="mb-3"
-                        src="/images/logo.png"
+                        :src="this.$store.state.logo"
                     ></v-img>
                 </div>
                 <v-card class="mx-auto pa-10" elevation="15">
@@ -102,7 +102,7 @@ export default {
             }
         };
     },
-
+    created: function() {},
     methods: {
         validate() {
             this.$refs.form.validate();
