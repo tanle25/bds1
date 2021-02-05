@@ -6,7 +6,7 @@
                 <div>
                     <v-img
                         :lazy-src="this.$store.state.logo"
-                        max-height="100"
+                        width="300px"
                         class="mb-3"
                         :src="this.$store.state.logo"
                     ></v-img>
