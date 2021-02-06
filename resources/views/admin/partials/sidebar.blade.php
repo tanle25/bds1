@@ -6,7 +6,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="/" class="brand-link  text-center">
-        <img src="{{$logo ?? ''}}" style="max-width: 80%">
+        <img src="{{$logo ?? ''}}" style="max-width: 80%; height: 26px">
     </a>
 
     <!-- Sidebar -->
