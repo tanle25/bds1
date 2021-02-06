@@ -1,9 +1,12 @@
 <!-- Main Sidebar Container -->
+@php
+    $logo = Str::replaceLast(',', '', $theme_options['logo']);
+@endphp
+
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="#" class="brand-link">
-
-        <span class="brand-text font-weight-light">HAMRONG MEDIA</span>
+    <a href="/" class="brand-link  text-center">
+        <img src="{{$logo ?? ''}}" style="max-width: 80%">
     </a>
 
     <!-- Sidebar -->

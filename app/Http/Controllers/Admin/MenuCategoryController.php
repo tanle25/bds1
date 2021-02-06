@@ -66,7 +66,7 @@ class MenuCategoryController extends Controller
      */
     public function edit($id)
     {
-        $menu_list = Menu::where('category', $id)->where('parent_id', null)->get()->toArray();
+        $menu_list = Menu::where('category', $id)->where('parent_id', null)->orderBy("sort")->get()->toArray();
         $menu_list = json_encode($menu_list);
         $category = MenuCategory::findOrFail($id);
         return view('admin.pages.menu.edit', compact('category', 'menu_list'));

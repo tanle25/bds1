@@ -105,6 +105,7 @@ class MenuController extends Controller
     public function saveTree(Request $request)
     {
         $data = $request->jsonData;
+
         // dd($data);
         $result = [];
         function getMenuAndParent($result = [], $array, $parent_id)
@@ -120,7 +121,6 @@ class MenuController extends Controller
         }
 
         $result = getMenuAndParent([], $data, null);
-
         foreach ($result as $item) {
             $menu = Menu::find($item['id']);
             $menu->parent_id = $item['parent_id'];
