@@ -44,11 +44,11 @@ class CustomerRechargeController extends Controller
 
     public function recharge(\App\Http\Requests\RechargeRequest $request)
     {
-        $is_human = $this->checkRecapcha($request);
+        // $is_human = $this->checkRecapcha($request);
 
-        if (!$is_human) {
-            return redirect()->back()->with('fail', 'Lỗi xác thực từ google capcha bạn có phải con người?');
-        }
+        // if (!$is_human) {
+        //     return redirect()->back()->with('fail', 'Lỗi xác thực từ google capcha bạn có phải con người?');
+        // }
         session(['prev_url' => url()->previous()]); // gắn url cũ vào session
         // Kiểm tra ví  người dùng có tồn tại k
         $user = Auth::user();
