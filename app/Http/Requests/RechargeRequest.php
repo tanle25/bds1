@@ -30,7 +30,7 @@ class RechargeRequest extends FormRequest
             'customer_phone' => 'required|max:256',
             'customer_message' => 'required|max:256',
             'payment_method' => 'required',
-            'bank_code' => 'required_if:payment_method,1',
+            // 'bank_code' => 'required_if:payment_method,1',
         ];
     }
 
