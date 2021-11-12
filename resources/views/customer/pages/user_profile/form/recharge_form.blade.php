@@ -88,7 +88,7 @@
                     <div class="method-checkbox"><input type="radio" checked name="payment_method" value="1"></div>
                 </div>
             </div>
-            <div class="bank-list payment-body p-2 w-100">
+            {{-- <div class="bank-list payment-body p-2 w-100">
                 <div class="row p-0 m-0 bg-white ">
                     @foreach ($vnpay_banks as $bank)
                     <div class="col-lg-2 col-md-3 col-4 bank-select border p-0 m-md-1">
@@ -97,7 +97,7 @@
                     </div>
                     @endforeach
                 </div>
-            </div>
+            </div> --}}
         </div>
 
         <div class="payment-wraper">
